@@ -347,7 +347,7 @@
       B <- model$B
       fixedIndexes <- 1
       ncov <-  if(!is.null(control$ncov)) control$ncov else 7
-      d_bar <- 2 #ncov  
+      d_bar <- ifelse(ncov <= 2, 1, 2)#2#ncov  
       d_bar <- ifelse(d_bar <= ncov, d_bar, 2)
       # indexes_covariates <- c(1,2,3,4,5,6,7,8)  #model$origData$indexes_covariates
       indexes_covariates <- if(!is.null(control$indexes_covariates)) control$indexes_covariates else 1:ncov
@@ -660,7 +660,7 @@
       B <- model$B
       fixedIndexes <- 1
       ncov <-  if(!is.null(control$ncov)) control$ncov else 7
-      d_bar <- 2 #ncov  
+      d_bar <- ifelse(ncov <= 2, 1, 2)#2#ncov  
       d_bar <- ifelse(d_bar <= ncov, d_bar, 2)
       # indexes_covariates <- c(1,2,3,4,5,6,7,8)  #model$origData$indexes_covariates
       indexes_covariates <- if(!is.null(control$indexes_covariates)) control$indexes_covariates else 1:ncov
@@ -980,7 +980,7 @@
       B <- model$B
       fixedIndexes <- 1
       ncov <-  if(!is.null(control$ncov)) control$ncov else 7
-      d_bar <- 2 #ncov  
+      d_bar <- ifelse(ncov <= 2, 1, 2)#2#ncov  
       d_bar <- ifelse(d_bar <= ncov, d_bar, 2)
       # indexes_covariates <- c(1,2,3,4,5,6,7,8)  #model$origData$indexes_covariates
       indexes_covariates <- if(!is.null(control$indexes_covariates)) control$indexes_covariates else 1:ncov
@@ -1309,7 +1309,7 @@
       B <- model$B
       fixedIndexes <- 1
       ncov <-  if(!is.null(control$ncov)) control$ncov else 7
-      d_bar <- 2 #ncov  
+      d_bar <- ifelse(ncov <= 2, 1, 2)#2#ncov  
       d_bar <- ifelse(d_bar <= ncov, d_bar, 2)
       # indexes_covariates <- c(1,2,3,4,5,6,7,8)  #model$origData$indexes_covariates
       indexes_covariates <- if(!is.null(control$indexes_covariates)) control$indexes_covariates else 1:ncov
